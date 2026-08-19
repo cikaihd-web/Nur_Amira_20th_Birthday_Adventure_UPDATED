@@ -15,6 +15,12 @@ function revealAnswer(page) {
   document.getElementById(`answer-${page}`).classList.remove("hidden");
 }
 
+function unlockCar() {
+  state.unlocked = Math.max(state.unlocked, 5);
+  localStorage.setItem("birthdayUnlocked", state.unlocked);
+  goTo(6);
+}
+
 function photoDone(page, input) {
   if (!input.files || !input.files[0]) return;
 
