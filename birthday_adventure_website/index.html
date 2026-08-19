@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17151b">
+  <title>For Nur Amira Batrisya ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <main class="app">
+    <!-- PAGE 1 -->
+    <section class="page active" id="page-1">
+      <div class="hero-card">
+        <div class="tiny">A little adventure made just for you</div>
+        <div class="cake">🎂</div>
+        <h1>Happy 20th Birthday</h1>
+        <h2>to My Lovely<br><span>Nur Amira Batrisya</span> ♡</h2>
+        <p class="lead">Today isn't just a birthday.<br>It's a little journey made especially for you.</p>
+        <button class="primary" onclick="goTo(2)">Begin Your Birthday Adventure <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page-2">
+      <div class="adventure-card">
+        <div class="agenda">AGENDA 01 · FIND YOUR FIRST SURPRISE</div>
+        <div class="icon">🍗</div>
+        <h2>A little clue for you...</h2>
+        <div class="riddle">
+          <p>Your first surprise waits<br>where something spicy meets something nice.</p>
+          <p>A plate of rice, a crispy bite,<br>a meal you love that feels just right.</p>
+          <p>Find the place that makes<br>your tummy especially happy. ♡</p>
+        </div>
+        <div class="hint">Take your best guess — then enjoy your food!</div>
+        <button class="primary" onclick="revealAnswer(2)">Reveal Destination</button>
+        <div class="answer hidden" id="answer-2">
+          <strong>🍗 AYAM GEPUK REDUP</strong>
+          <span>Now go enjoy your nasi ayam gepuk!</span>
+          <label class="upload">
+            📸 Take a picture of your Ayam Gepuk
+            <input type="file" accept="image/*" capture="environment" onchange="photoDone(2, this)">
+          </label>
+          <div class="photo-status" id="status-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page" id="page-3">
+      <div class="adventure-card">
+        <div class="agenda">AGENDA 02 · A CALM LITTLE ADVENTURE</div>
+        <div class="icon">🦁</div>
+        <h2>Where are we going next?</h2>
+        <div class="riddle">
+          <p>For our second little adventure,<br>we're going somewhere filled with life.</p>
+          <p>Where furry friends roam,<br>where wings take flight,<br>and we can slow down and enjoy the day.</p>
+          <p>Can you guess where we're going? 🐾</p>
+        </div>
+        <button class="primary" onclick="revealAnswer(3)">Reveal Destination</button>
+        <div class="answer hidden" id="answer-3">
+          <strong>🦁 ZOO NEGARA</strong>
+          <span>Let's spend some peaceful time with the animals.</span>
+          <label class="upload">
+            📸 Take a picture of an animal
+            <input type="file" accept="image/*" capture="environment" onchange="photoDone(3, this)">
+          </label>
+          <div class="photo-status" id="status-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4 -->
+    <section class="page" id="page-4">
+      <div class="adventure-card">
+        <div class="agenda">AGENDA 03 · SOMETHING SWEET</div>
+        <div class="icon">🍡</div>
+        <h2>One more stop...</h2>
+        <div class="riddle">
+          <p>One more stop before the final surprise,<br>and this one might satisfy your sweet tooth.</p>
+          <p>Something soft, something sweet,<br>a little treat that you love to eat.</p>
+          <p>Look for the place where little desserts await... ♡</p>
+        </div>
+        <button class="primary" onclick="revealAnswer(4)">Reveal Destination</button>
+        <div class="answer hidden" id="answer-4">
+          <strong>🍰 KLCG CAFE</strong>
+          <span>For your mochi cake and all the sweet things you love.</span>
+          <label class="upload">
+            📸 Take a picture of your mochi cake & desserts
+            <input type="file" accept="image/*" capture="environment" onchange="photoDone(4, this)">
+          </label>
+          <div class="photo-status" id="status-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5 -->
+    <section class="page" id="page-5">
+      <div class="adventure-card">
+        <div class="agenda">AGENDA 04 · THE LAST CLUE</div>
+        <div class="icon">🚗</div>
+        <h2>You've eaten, explored,<br>and had something sweet...</h2>
+        <div class="riddle">
+          <p>But your birthday adventure<br>isn't quite complete.</p>
+          <p>Your final destination isn't far away.<br>In fact, you've probably been there today.</p>
+          <p>No animals.<br>No restaurant.<br>No dessert.</p>
+          <p><strong>Just somewhere where<br>one more surprise is waiting for you.</strong> ♡</p>
+        </div>
+        <button class="primary" onclick="revealAnswer(5)">Where should I look?</button>
+        <div class="answer hidden" id="answer-5">
+          <strong>🚗 CHECK THE CAR</strong>
+          <span>There's something waiting for you inside.</span>
+          <button class="secondary" onclick="goTo(6)">I found it! →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6 -->
+    <section class="page" id="page-6">
+      <div class="adventure-card presents">
+        <div class="agenda">THE FINAL SURPRISE · 20 YEARS</div>
+        <div class="gift-big">🎁</div>
+        <h2>20 years.<br>20 presents.</h2>
+        <div class="riddle">
+          <p>One for every year you've been here.</p>
+          <p>Twenty little presents,<br>twenty little reminders<br>of how special you are to me.</p>
+          <p>Now I need one final picture... ♡</p>
+        </div>
+        <div class="present-count">
+          <span>20</span>
+          <small>PRESENTS</small>
+        </div>
+        <label class="upload">
+          📸 Take a picture holding all 20 presents
+          <input type="file" accept="image/*" capture="environment" onchange="photoDone(6, this)">
+        </label>
+        <div class="photo-status" id="status-6"></div>
+      </div>
+    </section>
+
+    <!-- PAGE 7 -->
+    <section class="page final-page" id="page-7">
+      <div class="final-wrap">
+        <div class="final-title">One last thing...</div>
+
+        <div class="envelope-scene" id="envelopeScene">
+          <div class="envelope" id="envelope" onclick="openLetter()">
+            <div class="letter-paper">
+              <div class="letter-lines"></div>
+              <div class="letter-mini">For Amira ♡</div>
+            </div>
+            <div class="flap"></div>
+            <div class="front-pocket"></div>
+            <div class="seal">♡</div>
+          </div>
+          <p class="tap-hint">Tap the envelope to open</p>
+        </div>
+
+        <div class="letter-reveal" id="letterReveal">
+          <div class="paper">
+            <div class="paper-top">Happy 20th Birthday, my love ♡</div>
+            <div class="letter-content">
+              <p>My dearest Nur Amira Batrisya,</p>
+
+              <p>Happy 20th birthday to the person who means so much to me. I hope today reminds you of how loved, appreciated and special you are. I wanted to make your birthday a little different this year, not just one surprise, but a whole little journey made especially for you. Every stop, every riddle and every present was chosen with you in mind.</p>
+
+              <p>Twenty presents for twenty years. Every single one is a little reminder of how special you are to me. And even though I accidentally ended up with more than twenty, today we are just going to pretend I planned it that way. 😭♡</p>
+
+              <p>We have been through so much together, especially what happened earlier this year. There was a point where everything felt so uncertain that I honestly did not know if we would still be together and standing here now. We went through a moment that brought us so close to despair, and there were times when I was scared that maybe this was where our story would end. But somehow, after everything, here we are. Still together. Still choosing each other. Still making memories.</p>
+
+              <p>I love you. Because I love you. And no offense, but you are wrong. You are wrong about us being on different paths. We are not on different paths. You are my path, and you are always going to be my path.</p>
+
+              <p>And I know there are a million reasons why we should not be together. I know that. But I am tired of them. I am tired of every single one of them. We have all got to make a choice, and I choose you.</p>
+
+              <p>So, here are my thoughts. If it is true that you are going to get accepted to UNIMAS in Sarawak, you are not going there alone. It is both of us. I am following you now. I am just going to follow you everywhere. I am just going to follow you for the rest of my life.</p>
+
+              <p>If I am your Spidey, then you are my one and only Gwen. Because Gwen loves Peter Parker more than Spider Man, and that is who you are to me. You loved me when I was at absolute zero. Your love for me has always been consistent and constant, no matter how much I have changed or how much life has changed around me.</p>
+
+              <p>Not once did you give up on me, even though I have done so many bad things towards you and broken your heart. Especially after what happened to us earlier this year. Sometimes I wish I could make you forget everything about me because being with me has felt like a threat to your happiness. More than anything, I just want to see you happy.</p>
+
+              <p>But there is no force on this earth that will stop me from getting myself to you. You are my other half. You complete me, Amira. Without you, there is no Danial.</p>
+
+              <p>Thank you for being you, for all the memories we have made, for staying when things were difficult, and for loving me through every version of myself. I hope your 20th year brings you everything beautiful you deserve, and I hope I get to be beside you through all of it.</p>
+
+              <p class="signature">I love you, baby sayang.<br><span>Always and forever, ♡</span></p>
+            </div>
+          </div>
+        </div>
+
+        <button class="music-control" id="musicControl" onclick="toggleMusic()">♫ Turning Page</button>
+      </div>
+
+      <!-- Put your legally obtained copy of the instrumental at assets/turning-page.mp3 -->
+      <audio id="music" preload="auto" loop>
+        <source src="assets/turning-page.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
